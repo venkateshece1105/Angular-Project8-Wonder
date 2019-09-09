@@ -1,0 +1,29 @@
+
+  <div class="container">
+    <div class="row align-items-center" *ngFor=" let ind = index; let section of section;">
+      <div *ngIf="ind%2 == 0" class="col-lg-6 order-lg-2">
+        <div class="p-5">
+          <img class="img-fluid rounded-circle" [src]="section.img" alt="">
+        </div>
+      </div>
+      <div *ngIf="ind%2 == 0" class="col-lg-6 order-lg-1">
+        <div class="p-5">
+          <h2 class="display-4">{{section.title}}</h2>
+          <p>{{section.description}}</p>
+        </div>
+      </div>
+      <div *ngIf="ind%2 == 1" class="col-lg-6 order-lg-1">
+        <div class="p-5">
+          <img class="img-fluid rounded-circle" [src]="section.img" alt="">
+        </div>
+      </div>
+      <div *ngIf="ind%2 == 1" class="col-lg-6 order-lg-2">
+        <div class="p-5">
+          <h2 class="display-4">{{section.title}}</h2>
+          <p>{{section.description}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
